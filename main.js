@@ -27,9 +27,9 @@ function movePlayer(event) {
         updatePlayer(player.row, player.col + 1);
     }else if (event.keyCode == 37 && player.col > 0 && grid[player.row][player.col - 1] == 0) { //left arrow key
         updatePlayer(player.row, player.col - 1);
-    } else if (event.keyCode == 38 && player.row > 0 && grid[player.row - 1][player.col]) { //up arrow key
+    } else if (event.keyCode == 38 && player.row > 0 && grid[player.row - 1][player.col] == 0) { //up arrow key
         updatePlayer(player.row - 1, player.col);
-    } else if (event.keyCode == 40 && player.row < 9 && grid[player.row + 1] == 0[player.col]) { //down arrow key
+    } else if (event.keyCode == 40 && player.row < 9 && grid[player.row + 1][player.col] == 0) { //down arrow key
         updatePlayer(player.row + 1, player.col);
     }
 }
